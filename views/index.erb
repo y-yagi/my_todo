@@ -18,3 +18,16 @@
     <% end %>
   </tbody>
 </table>
+
+<hr>
+
+<h4>登録</h4>
+<form action='/todos' method='post'>
+  <%== csrf_tag %>
+  <div class='form-group'>
+    <input type='text' name='todo[content]' id='todo_content' required='true', placeholder='内容'>
+    <input type='datetime-local' name='todo[deadline]' id='todo_deadline'>
+  </div>
+
+  <input type='submit' name='commit' value='作成', class='btn btn-primary'>
+</form>

@@ -36,5 +36,12 @@ class MyTodo < Roda
       @todos = Todo.all
       view 'index'
     end
+
+    r.post 'todos' do
+      todo = Todo.new(r.params['todo'])
+      todo.save
+      flash[:notice] = 'Todoを作成しました'
+      r.redirect '/'
+    end
   end
 end
