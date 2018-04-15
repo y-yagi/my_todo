@@ -14,6 +14,7 @@
       <tr>
         <td><%= todo.content %></td>
         <td><%= todo.deadline %></td>
+        <td><a href='<%= "/todo/#{todo.id}" %>'>削除</a></td>
       </tr>
     <% end %>
   </tbody>

@@ -43,5 +43,19 @@ class MyTodo < Roda
       flash[:notice] = 'Todoを作成しました'
       r.redirect '/'
     end
+
+    r.on 'todo', Integer do |id|
+      @todo = Todo[id]
+
+      r.get do
+        view 'delete'
+      end
+
+      r.post 'destroy' do
+        @todo.destroy
+        flash[:notice] = 'Todoを削除しました'
+        r.redirect '/'
+      end
+    end
   end
 end
