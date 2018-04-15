@@ -8,7 +8,7 @@ require 'rack/test'
 
 require_relative '../minitest_helper'
 
-Capybara.app = App.freeze.app
+Capybara.app = MyTodo.freeze.app
 
 class Minitest::HooksSpec
   include Rack::Test::Methods
