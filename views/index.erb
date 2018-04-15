@@ -1,1 +1,20 @@
-<h1>Hello World!</h1>
+<h1>Todo</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>内容</th>
+      <th>期限</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.content %></td>
+        <td><%= todo.deadline %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

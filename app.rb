@@ -33,6 +33,7 @@ class MyTodo < Roda
     r.multi_route
 
     r.root do
+      @todos = Todo.all
       view 'index'
     end
   end
