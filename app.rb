@@ -25,6 +25,7 @@ class MyTodo < Roda
   plugin :assets, css: 'app.scss', css_opts: {style: :compressed, cache: false}, timestamp_paths: true
   plugin :render, escape: true
   plugin :multi_route
+  plugin :json, classes: [Array, Hash, Sequel::Model]
 
   Unreloader.require('routes'){}
 
