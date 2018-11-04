@@ -3,13 +3,21 @@
   <%== csrf_tag %>
   <table class="table table-bordered table-striped">
     <tr class="string required">
-      <td><label class="label-before" for="todo_content">内容</label></td>
-      <td><span><%= @todo.content %></span></td>
+      <td>
+        <label class="label-before" for="todo_content">内容</label>
+      </td>
+      <td>
+        <span><%= @todo.content %></span>
+      </td>
     </tr>
     <tr class="string required">
-      <td><label class="label-before" for="todo_deadline">期限</label></td>
-      <td><span><%= @todo.deadline %></span></td>
+      <td>
+        <label class="label-before" for="todo_deadline">期限</label>
+      </td>
+      <td>
+        <span><%= @todo.deadline %></span>
+      </td>
     </tr>
   </table>
-  <input type='submit' name='delete' value='削除' class='btn btn-danger'>
+  <input type='submit' name='delete' class='btn btn-danger' value='削除'>
 </form>
